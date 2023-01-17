@@ -1,0 +1,38 @@
+<div *ngIf="data.type == 'edit'">
+
+    <form [formGroup]="memberEdit" #f="ngForm" (ngSubmit)=" editMember()">
+        <mat-form-field appearance="outline">
+            <mat-label>
+                User Id
+            </mat-label>
+            <input formControlName="id" matInput>
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>
+                Name
+            </mat-label>
+            <input formControlName="name" matInput>
+
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>
+                Email
+            </mat-label>
+            <input formControlName="email" matInput>
+
+        </mat-form-field>
+
+        <div class="spacing">
+            <button type="submit" >Submit</button>
+        </div>
+    </form>
+
+</div>
+
+<div *ngIf="data.type == 'delete'">
+    <div>Are you sure Want to delete</div>
+    <div class="spacing">
+        <button (click)="delete()"> Delete</button>
+    </div>
+</div>
