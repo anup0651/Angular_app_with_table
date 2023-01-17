@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.module';
-import { DialogOverviewExampleComponent } from './dialog-overview-example/dialog-overview-example.component';
+import { UserDailogComponent } from './user-dialog/user-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogOverviewExampleComponent
+    UserDailogComponent
   ],
   imports: [
     BrowserModule,

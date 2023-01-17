@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { DialogOverviewExampleComponent } from 'src/app/dialog-overview-example/dialog-overview-example.component';
+import { UserDailogComponent } from 'src/app/user-dialog/user-dialog.component';
 import { AppService } from './app.service';
 
 @Component({
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   openDialog(element: any, actiontype: any): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleComponent, {
+    const dialogRef = this.dialog.open(UserDailogComponent, {
       data: { array: element, type: actiontype },
     });
 

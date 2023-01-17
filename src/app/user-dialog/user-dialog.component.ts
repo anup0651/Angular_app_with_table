@@ -4,12 +4,12 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-dialog-overview-example',
-  templateUrl: './dialog-overview-example.component.html',
-  styleUrls: ['./dialog-overview-example.component.scss'],
+  selector: 'app-user-dialog',
+  templateUrl: './user-dialog.component.html',
+  styleUrls: ['./user-dialog.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DialogOverviewExampleComponent implements OnInit {
+export class UserDailogComponent implements OnInit {
 
   memberEdit = new FormGroup({
     id: new FormControl(''),
@@ -17,7 +17,7 @@ export class DialogOverviewExampleComponent implements OnInit {
     email: new FormControl(''),
   });
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogOverviewExampleComponent>, public appservice: AppService) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<UserDailogComponent>, public appservice: AppService) {
 
     this.memberEdit.patchValue({
       id: this.data.array.id,
